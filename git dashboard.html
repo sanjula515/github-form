@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Dashboard</title>
+
+    <style>
+      button {
+        display: inline-block;
+        background-color:lightcoral;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color:black;
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+        width: 100px;
+        cursor: pointer;
+        margin: 5px;
+        }
+      button:hover {
+        background-color:goldenrod;
+        }
+    h1{
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow:2px 2px 5px palegoldenrod;
+    font-size: 45px;         
+}
+body{
+  background-image: url("pic1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+</style>
+  </head>
+  <body>
+    <h1><i>Welcome to Dashboard</i></h1>
+    <button type="button" onclick="send()">Update Profile</button>
+    <div>
+    <button type ="button" onclick="del()">Delete</button>
+    </div>
+  </body>
+  <script>
+    function del()
+    {
+       localStorage.removeItem("name");
+       localStorage.removeItem("email");
+       localStorage.removeItem("password");
+       alert("successfully deleted");
+       location.replace("github.html");
+   
+    }
+    function send()
+    {
+       location.replace("git edit.html");
+    }
+   </script>
+   
+</html>
